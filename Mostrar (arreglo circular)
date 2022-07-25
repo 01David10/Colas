@@ -1,0 +1,12 @@
+// procedimiento para mostrar (muestra tambien las posiciones donde no hay datos)
+void MOSTRAR_AC (short cola[], short &primero, short &ultimo, short n)
+{
+    // variables
+    short i;
+
+    for (i = 1; i <= n; i ++)
+    {
+        cout << cola [i] << " ";
+    }
+    cout << endl;
+} 
