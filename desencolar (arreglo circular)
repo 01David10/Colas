@@ -1,0 +1,20 @@
+// procedimiento para desencolar
+void DESENCOLAR_AC (short cola[], short n, short &primero, short &ultimo)
+{
+    // variables
+    short dato;
+    
+    if (ultimo == primero)
+    {
+        cout << "La cola esta vacia";
+        return;
+    }
+    
+    primero = (primero +1) % n;
+
+    dato = cola [primero];
+
+    cola [primero] = 0;
+
+    MOSTRAR_AC (cola, primero, ultimo, n);
+}
