@@ -1,0 +1,18 @@
+// procedimiento para desencolar
+void DESENCOLAR_ANC (short cola[], short &primero, short &ultimo)
+{
+    // variables
+    short dato;
+    
+    if (primero == ultimo)
+    {
+        cout << "la cola esta vacia";
+        return;
+    }
+    primero = primero+1;
+
+    dato = cola [primero];
+    dato = 0;       // revisar esto
+
+    MOSTRAR_ANC (cola, primero, ultimo);
+}
