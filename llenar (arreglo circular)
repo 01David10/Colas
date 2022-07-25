@@ -1,0 +1,31 @@
+// procedimiento para llenar arreglo circular (no funciona si hay espacios entre datos)
+void LLENAR_AC (short cola[], short &n, short &primero, short &ultimo)
+{
+    // variables
+    short cont =1;     // muestra el numero de dato que se esta ingresando
+    short i;        // indice, para recorrer
+    short inicio;   // donde se empezaran a llenar los datos
+    short fin;      // hasta donde se llenaran los datos
+
+    cout << "Ingrese la cantidad de elementos de la cola: ";
+    cin >> n;
+    
+    cout << "En que posicion quiere empezar? ";
+    cin >> inicio;
+
+    cout << "Hasta que posicion quiere llenar? ";
+    cin >> fin;
+
+    for (i = inicio; i <= fin; i ++)
+    {
+        cout << "Ingrese el dato " << cont << ": ";
+        cin >> cola [i]; 
+
+        cont++;
+    }
+
+    primero = inicio-1;
+    ultimo = fin;
+
+    MOSTRAR_AC (cola, primero, ultimo, n);
+}
