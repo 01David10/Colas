@@ -1,0 +1,21 @@
+// procedimiento para encolar
+void ENCOLAR_AC (short cola[], short n, short &primero, short &ultimo)
+{
+    // variables
+    short i, dato;
+
+    cout << "Ingrese el dato que desea encolar: ";
+    cin >> dato;
+
+    ultimo = (ultimo +1) %n;
+
+    if (ultimo == primero)
+    {
+        cout << "La cola esta llena";
+        return;
+    }
+    
+    cola [ultimo] = dato;
+
+    MOSTRAR_AC (cola, primero, ultimo, n);
+}
