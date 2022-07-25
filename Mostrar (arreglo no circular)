@@ -1,0 +1,12 @@
+// procedimiento para mostrar
+void MOSTRAR_ANC (short cola[], short &primero, short &ultimo)
+{
+    // variables
+    short i;
+
+    for (i = primero+1; i <= ultimo; i ++)
+    {
+        cout << cola [i] << " ";
+    }
+    cout << endl;
+} 
